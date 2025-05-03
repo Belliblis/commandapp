@@ -7,21 +7,21 @@ Features
 -Built with TypeScript and Yargs
 -Tested with Jest
 
-1.Clone the repo
-  git clone https://github.com/yourusername/commandapp.git
+1.Clone the repo:
+  git clone https://github.com/Belliblis/commandapp.git
 
-2.Install dependencies
+2.Install dependencies:
   npm install
 
-3.Add your OpenAI API key
+3.Add your OpenAI API key:
   Create a .env.local file with:
     API_KEY = your_api_key
     
-4.Build app
+4.Build app:
   tsc
   
-5.Run app
+5.Run app:
   npm start
   
-6.Test app
+6.Test app:
   npm test
