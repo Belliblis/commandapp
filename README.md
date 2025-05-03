@@ -21,7 +21,7 @@ Features
   tsc
   
 5.Run app:
-  npm start
+  npm start or node run image-to-text
   
 6.Test app:
   npm test
