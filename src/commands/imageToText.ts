@@ -1,15 +1,13 @@
 import { CommandModule } from 'yargs';
 import { Logger } from "../utils/logger";
-import { loadEnv } from "../utils/loader";
 import { checkFileExists, checkFileIsImage, convertImageToBase64DataUrl } from "../services/fileService";
 import { exctractTextFromImage } from "../services/openAIService";
 import { askQuestion } from "../utils/askQuestion";
 
 const logger = new Logger();
 
-const handleImagePath = async () => {
+export const handleImagePath = async () => {
   try {
-    await loadEnv();
     if (!process.env.API_KEY) {
       throw new Error('No API key found in your env file!');
     }
