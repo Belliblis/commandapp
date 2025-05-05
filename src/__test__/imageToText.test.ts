@@ -15,14 +15,14 @@ test('runs successfully and logs the extracted text', async () => {
     await imageToTextCommand.handler({ _: [], $0: '' });
     expect(consoleSpy).toHaveBeenCalledWith(expect.stringMatching(/Текст, обнаруженный на изображении:/))
   }, 30000);
-  test('runs successfully and logs the message that explains that image does not contain text', async () => {
+test('runs successfully and logs the message that explains that image does not contain text', async () => {
     const consoleSpy = jest.spyOn(console, "log");
     const mockPath:string = __dirname+'/test_images/no_text_image.png'
     mockedAskQuestion.mockResolvedValue(mockPath);
     await imageToTextCommand.handler({ _: [], $0: '' });
     expect(consoleSpy).toHaveBeenCalledWith(expect.stringMatching(/Текст на изображении обнаружен не был/))
   }, 30000);
-  test('thorws an error on image file with forbidden extension', async () => {
+test('thorws an error on image file with forbidden extension', async () => {
     const consoleSpy = jest.spyOn(console, "log");
     const mockPath:string = __dirname+'/test_images/wrong_format_image_with_text.svg'
     mockedAskQuestion.mockResolvedValue(mockPath);
