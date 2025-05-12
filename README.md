@@ -16,7 +16,12 @@ Features -Prompts user for image path -Extracts visible text using OpenAI -Logs 
 
 6.Test app: npm test
 
-Changes:
+06.05.2025 Changes:
 -Added loading environmental variables with dotenv library
 -Changed test cases to suit production purposes
 -Added images for easy testing
+
+12.05.2025 Changes:
+
+-   Added Api service
+-   "npm run image-to-text" now starts fastify server that accepts multipart/form-data content with files and extracts text from them using OPenAI library
